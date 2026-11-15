@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title>Talleres Tecnológicos</title>
+    <link rel="stylesheet" href="/estilos.css">
+    </head>
+    <body>
+    <header>
+        <a href="/talleres">Jornadas Tecnológicas - Talleres</a>
+    </header>
+
+    <div class="card">
+        <form action="/talleres" method="GET" class="filtros">
+        <select name="categoria">
+            <option value="">Todas las categorías</option>
+            <option value="sistemas" <%= filtros.categoria === 'sistemas' ? 'selected' : '' %>>Sistemas</option>
+            <option value="web" <%= filtros.categoria === 'web' ? 'selected' : '' %>>Web</option>
+        </select>
+
+        <select name="nivel">
+            <option value="">Todos los niveles</option>
+            <option value="inicial" <%= filtros.nivel === 'inicial' ? 'selected' : '' %>>Inicial</option>
+            <option value="intermedio" <%= filtros.nivel === 'intermedio' ? 'selected' : '' %>>Intermedio</option>
+            <option value="avanzado" <%= filtros.nivel === 'avanzado' ? 'selected' : '' %>>Avanzado</option>
+        </select>
+
+        <label>
+            <input type="checkbox" name="disponibles" value="true" <%= filtros.disponibles === 'true' ? 'checked' : '' %>>
+            Solo disponibles
+        </label>
+
+        <button type="submit">Filtrar</button>
+        <a href="/talleres" class="btn btn-secundario">Limpiar</a>
+        </form>
+    </div>
+
+    <% if (talleres.length === 0) { %>
+        <div class="card"><p>No hay talleres que coincidan con esos filtros.</p></div>
+    <% } %>
+
+    <% talleres.forEach(taller => { %>
+        <div class="card">
+        <h2><%= taller.titulo %></h2>
+        <p><strong>Categoría:</strong> <%= taller.categoria %> | <strong>Nivel:</strong> <%= taller.nivel %></p>
+        <p><span class="badge"><%= taller.estado %></span></p>
+        <a href="/talleres/<%= taller.id %>" class="btn">Ver ficha</a>
+        </div>
+    <% }) %>
+    </body>
+    </html>

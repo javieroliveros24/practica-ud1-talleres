@@ -1,0 +1,25 @@
+{
+    "name": "practica-talleres",
+    "version": "1.0.0",
+    "description": "Sistema de inscripcion a talleres - UD1",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.10",
+        "express": "^4.22.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/javieroliveros24/practica-ud1-talleres.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/javieroliveros24/practica-ud1-talleres/issues"
+    },
+    "homepage": "https://github.com/javieroliveros24/practica-ud1-talleres#readme"
+}

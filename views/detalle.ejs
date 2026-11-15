@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title><%= taller.titulo %></title>
+    <link rel="stylesheet" href="/estilos.css">
+    </head>
+    <body>
+    <header>
+        <a href="/talleres">← Volver al listado</a>
+    </header>
+
+    <% if (exito) { %>
+        <div class="exito">¡Inscripción realizada con éxito!</div>
+    <% } %>
+
+    <div class="card">
+        <h1><%= taller.titulo %></h1>
+        <p><strong>Categoría:</strong> <%= taller.categoria %></p>
+        <p><strong>Nivel:</strong> <%= taller.nivel %></p>
+        <p><strong>Plazas totales:</strong> <%= taller.plazas %></p>
+        <p><strong>Estado actual:</strong> <span class="badge"><%= estado %></span></p>
+
+        <% if (plazasRestantes > 0) { %>
+        <a href="/talleres/<%= taller.id %>/inscripcion" class="btn">Inscribirse en este taller</a>
+        <% } else { %>
+        <p><strong>Este taller ya no admite más inscripciones.</strong></p>
+        <% } %>
+    </div>
+    </body>
+    </html>

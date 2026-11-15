@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <title>Inscripción - <%= taller.titulo %></title>
+    <link rel="stylesheet" href="/estilos.css">
+    </head>
+    <body>
+    <header>
+        <a href="/talleres/<%= taller.id %>">← Volver al taller</a>
+    </header>
+
+    <div class="card">
+        <h2>Inscripción: <%= taller.titulo %></h2>
+
+        <% if (errores.length > 0) { %>
+        <div class="error">
+            <ul>
+            <% errores.forEach(err => { %>
+                <li><%= err %></li>
+            <% }) %>
+            </ul>
+        </div>
+        <% } %>
+
+        <form action="/talleres/<%= taller.id %>/inscripcion" method="POST">
+        <p>
+            <label>Nombre completo:</label><br>
+            <input type="text" name="nombre" value="<%= datos.nombre %>" style="width: 95%;">
+        </p>
+        <p>
+            <label>Correo electrónico:</label><br>
+            <input type="email" name="email" value="<%= datos.email %>" style="width: 95%;">
+        </p>
+        <button type="submit">Confirmar inscripción</button>
+        </form>
+    </div>
+    </body>
+    </html>
