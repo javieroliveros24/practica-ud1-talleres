@@ -1,4 +1,4 @@
-# Práctica de Recuperación UD1 - Sistema de inscripción a talleres y actividades
+https://gemini.google.com/app/363d6e5651601914?utm_source=app_launcher&utm_medium=owned&utm_campaign=base_all# Práctica de Recuperación UD1 - Sistema de inscripción a talleres y actividades
 
 Este proyecto es la práctica de recuperación de la Unidad Didáctica 1 de Desarrollo Web en Entorno Servidor. Consiste en una aplicación web hecha con **Node.js**, **Express** y el motor de plantillas **EJS** para gestionar el listado y las inscripciones de unos talleres para unas jornadas tecnológicas[cite: 1, 2, 3].
 
