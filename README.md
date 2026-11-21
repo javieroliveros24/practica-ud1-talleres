@@ -1,7 +1,7 @@
 # Práctica de Recuperación UD1 - Sistema de inscripción a talleres y actividades
 Conversación usada como apoyo para consultar dudas durante la realización de la práctica:
 
-- [Chat de apoyo TAMBIEN PARA LA AMPLIACIÓN QUE SIRVE PARA LA RECUPERACIÓN (Gemini)](https://gemini.google.com/app/c0e348d9ec138928)
+- [Chat de apoyo TAMBIEN PARA LA AMPLIACIÓN QUE SIRVE PARA LA RECUPERACIÓN : https://gemini.google.com/app/1f25dcbf45e826c7
 
 Este proyecto es la práctica de recuperación de la Unidad Didáctica 1 de Desarrollo Web en Entorno Servidor. Es una aplicación web hecha con **Node.js**, **Express** y el motor de plantillas **EJS** para consultar los talleres de unas jornadas tecnológicas e inscribirse en ellos.
 
